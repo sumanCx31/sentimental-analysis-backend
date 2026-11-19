@@ -22,7 +22,7 @@ for resource in ["punkt", "punkt_tab", "wordnet", "omw-1.4"]:
 # Load saved vectorizer and TFLite model once when the server starts
 cv = joblib.load("count_vectorizer.pkl")
 
-model = tf.lite.Interpreter(model_path="sentimental_analysis.h5")
+model = tf.lite.Interpreter(model_path="sentiment_model.tflitee")
 model.allocate_tensors()
 
 # Get input and output details for TFLite inference
